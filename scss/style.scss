@@ -1,0 +1,605 @@
+/*#################### IMPORTACIONES DE ESTILOS ####################*/
+@import "reset";
+@import "global";
+@import "grids";
+@import "scss/bootstrap.scss";
+//#################### VARIABLES ####################
+$colorPrincipal: #47D0AF;
+$colorSombraUno: #47D0AF;
+
+//#################### MIXING ####################
+@mixin display ($modo, $direccion) {
+    display: $modo;
+    flex-direction: $direccion;
+}
+@mixin margin ($arriba, $abajo, $derecha, $izquierda) {
+    margin-top: $arriba;
+    margin-bottom: $abajo;
+    margin-right: $derecha;
+    margin-left: $izquierda;
+}
+
+//#################### CUERPO - MAIN ####################
+/*#################### ESTILOS GENERALES INDEX ####################*/
+/******************** Header ********************/
+/* Slider Principal */
+.sliderPrincipal {
+    @include display(flex, row);
+    width: 100%;
+    & .cajonSliderPrincipal {
+        width: 50%; 
+        margin: auto;
+        .tituloIndexSliderPrincipal {
+            animation-name: tituloIndexSliderPrincipal;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay: 0.5;
+        }
+        @keyframes tituloIndexSliderPrincipal {
+            /* inicio */ 
+            from {
+                transform: translateX(-500px);
+                opacity: 5;
+                color: $colorPrincipal;
+            }
+            /* fin */
+            to {
+                opacity: 50;
+                color: $colorPrincipal;
+            }
+        }
+        .subTituloIndexSliderPrincipal {
+            animation-name: subTituloIndexSliderPrincipal;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-delay: 0.5;
+        }
+        @keyframes subTituloIndexSliderPrincipal {
+            /* inicio */
+            from {
+                transform: translateX(-500px);
+                opacity: 5;
+                color: $colorPrincipal;
+            }
+            /* fin */
+            to {
+                opacity: 50;
+                color: $colorPrincipal;
+            }
+        }
+        .imagenSliderPrincipal {
+            width: 100%;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+    }
+}
+/* Slider Secundario */
+.sliderSecundario {
+    @extend .sliderPrincipal;
+    .cajonSliderSecundario {
+        display: flex;
+        flex-direction: row;
+        margin: 0px auto;
+        h3 {
+            @include margin(auto, auto, 20px, 20px);
+        }
+        .imagenSliderSecundario {
+            width: 150px; 
+            transition: all 1.2s;
+            &:hover {
+                transform:scale(1.1);
+            }
+        }
+    }
+    #cajonSliderSecundarioUno {
+        background-color: #642cb352;
+    }
+    #cajonSliderSecundarioDos {
+        background-color: #414ab25d;
+    }
+    #cajonSliderSecundarioTres {
+        background-color: #2d9bf069;
+    }
+}
+/****************************************/
+/******************** Cuerpo Index Main ********************/
+/* Sección inicial */
+.seccionUno {
+    @extend .sliderPrincipal;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .cajonSeccionUno {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        .imagenResalte {
+            width: 200px; 
+            margin: 0 auto; 
+            transition: all 1.3s;
+            &:hover {
+                border-radius:50%;
+                box-shadow: 0px 0px 5px 5px $colorSombraUno;
+                transform: rotate(10deg);
+                filter: opacity(.5);
+                width: 220px;
+            }
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+}
+/* Sección final diagrama */
+.seccionDos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .cajonSeccionDos {
+        @extend .seccionDos;
+        text-align: center;
+        @include margin (0, 20px, auto, auto);
+        & h2, & p {
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: left;
+        }
+        .imagenDiagrama {
+            width: 80%; 
+            margin: auto;
+        }
+    }
+}
+/****************************************/
+/*######################################################################*/
+/*#################### ESTILOS GENERALES "NUESTRO EQUIPO" ####################*/
+/******************** HEADER  ********************/
+/* Header */
+.sliderPrincipalNE {
+    text-align: left;
+    padding: 50px;
+    background-color: #47D0AF;
+    .tituloPrincipalNE {
+        animation-name: tituloPrincipalNE;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 0.5;
+    }
+}
+@keyframes tituloPrincipalNE {
+    /* inicio */
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+        color: white;
+    }
+    /* fin */
+    to {
+        opacity: 50;
+        color: white;
+    }
+}
+/****************************************/
+/******************** EQUIPO  ********************/
+/* Seccion Uno */
+.seccionEquipoUnoNE {
+    @extend .sliderPrincipal;
+    margin-top: 50px;
+    text-align: center;
+    #cajonColorUno {border-color: #8FD14F;}
+    #cajonColorDos {border-color: #47D0AF;}
+    #cajonColorTres {border-color: #12CDD4;}
+}
+/* Seccion Dos */
+.seccionEquipoDosNE {
+    @extend .sliderPrincipal;
+    margin-top: 50px;
+    #cajonColorCuatro {border-color: #47D0AF;}
+    #cajonColorCinco {border-color: #2D9BF0;}
+}
+.cajonEquipoNE {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    margin: 0px auto;
+    text-align: left;
+    width: 32%;
+    &:hover {
+        width: 34%;
+    }
+    .imagenEquipoNE {width: 100%;}
+    .textoEquipoNE {padding: 20px;}
+}
+/****************************************/
+/******************** MARCAS  ********************/
+/* Marcas */
+.seccionMNE {
+    width: 100%;
+    margin-bottom: 30px;
+}
+seccionMarcasNE {
+    @extend .seccionDos;
+    margin-top: 30px;
+}
+.seccionMarcasUnoNE {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.seccionMarcasDosNE {
+    text-align: center;
+}
+.imagenMarcasNE {
+    width: 20%; 
+    margin: 20px;
+}
+#marcaUno {
+    animation-name: marcaUno;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+}
+//MAPA CON EACH
+/*Inicio de MAPA con Each*/
+$marca:(
+    marcaDos: marcaDos,
+    marcaTres: marcaTres,
+    marcaCuatro: marcaCuatro,
+    marcaCinco: marcaCinco,
+    marcaSeis: marcaSeis,
+    marcaSiete: marcaSiete,
+    marcaOcho: marcaOcho
+);
+@each $etiqueta, $animacion in $marca {
+    ##{$etiqueta}{
+        animation-name: $animacion;
+        @extend #marcaUno;
+    }
+}
+/*Fin de MAPA con Each*/
+@keyframes marcaUno {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1.1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaDos {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1.1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaTres {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1.1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaCuatro {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaCinco {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1.1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaSeis {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1.1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaSiete {/* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+    /* fin */}
+@keyframes marcaOcho {
+    /* inicio */
+    0%{transform: scale(1);}
+    12.5% {transform: scale(1);}
+    25% {transform: scale(1);}
+    37.5% {transform: scale(1);}
+    50% {transform: scale(1);}
+    62.5% {transform: scale(1);}
+    75% {transform: scale(1);}
+    87.5% {transform: scale(1);}
+    100% {transform: scale(1.1);}
+    /* fin */}
+
+
+/****************************************/
+/*######################################################################*/
+/*#################### ESTILOS GENERALES "SERVICIO" ####################*/
+
+/*######################################################################*/
+/*#################### ESTILOS GENERALES "PRODUCTO" ####################*/
+/******************** Header  ********************/
+/* Header */
+.sliderPrincipalP {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/****************************************/
+/******************** Secciones MAIN  ********************/
+/* Seccion Uno */
+#colorCajonUno {background-color: #2D9BF0;}
+#colorCajonDos {background-color: #47D0AF;}
+#colorCajonTres {background-color: #CEE741;}
+.seccionUnoP {
+    @extend .seccionDos;
+}
+.cajonSeccionUnoP {
+    @extend .sliderPrincipal;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.opcionCajonSeccionUnoP {
+    width: 32%;
+    margin: 0 auto;
+    
+}
+.imagenSeccionUnoP {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.cajonTituloSeccionUnoP, .cajonTextoSeccionUnoP {
+    margin: 10px;
+    color: white;
+}
+/* Seccion Dos */
+#colorOnpremisesUno {background-color: #12CDD4;}
+#colorOnpremisesDos {background-color: #8FD14F;}
+.seccionDosP {
+    @extend .seccionDos;
+}
+.textoSeccionDosP {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.productosOnpremisesP {
+    @extend .seccionDos;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cajonOnpremisesP {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    @include margin(30px, 30px, auto, auto);
+}
+.cajonImagenOnpremiseP {
+    width: 30%;
+    margin: auto;
+}
+.cajonDescripcionOnpremisesP {
+    width: 70%;
+    margin: auto;
+}
+.imagenOnpremiseP {
+    width: 100%;
+}
+.tituloOnpremiseP, .textoOnpremiseP {
+    margin: 20px;
+}
+/* Seccion Tres */
+.seccionTresP {
+    width: 100%;
+}
+
+.botonSeccionTresP {
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.botonSeccionTresP span {
+    height: 60px;
+    padding: 20px 100px;
+    background-color: #47D0AF;
+    border-radius: 8px;
+}
+.botonSeccionTresP span a {
+    text-decoration: none;
+    color: black;
+}
+.botonSeccionTresP span:hover {
+    background-color: #8FD14F;
+}
+/****************************************/
+/*######################################################################*/
+/*#################### ESTILOS GENERALES "CONTACTANOS" ####################*/
+/******************** Header  ********************/
+/* Cabecera */
+.sliderPrincipalUnoC {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.sliderPrincipalDosC { 
+    @extend .sliderPrincipal;
+}
+.opcionContactoC {
+    width: 32%;
+    margin: 0 auto;
+    border: solid 1px #47D0AF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.imagenOpcionContactoC {
+    width: 100%;
+    text-align: right;
+}
+.tituloOpcionC {
+    @extend .sliderPrincipal;
+}
+.objetoTituloOpcionC {
+    margin: auto;
+}
+#opcionTituloUnoC, #opcionTituloDosC, #opcionTituloTresC {
+    width: 80%;
+}
+#opcionImagenUnoC, #opcionImagenDosC, #opcionImagenTresC {
+    width: 20%;
+}
+.textoOpcionC li {
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+.objetoTituloOpcionC h2 {
+    color: #12CDD4;
+    margin-left: 10px;
+}
+/****************************************/
+/******************** MAIN  ********************/
+/* Formulario */
+.formularioC {
+    @extend .seccionDos;
+}
+.tituloFormularioC {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cajonFormularioC {
+    @extend .sliderPrincipal;
+}
+#opcionFormularioUnoC {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.frmCamp {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.frmCampLbl {
+    width: 20%;
+}
+.frmCampLbl p {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.frmCampTxt {
+    width: 80%;
+}
+.frmCampTxt input {
+    width: 90%;
+    height: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.219);
+}
+.frmTextarea {
+    width: 100%;
+    text-align: center;
+}
+.frmTextareaCamp {
+    width: 90%;
+
+}
+.frmBtn {
+    display: flex;
+    flex-direction: row;
+}
+.frmBtnBtn {
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    border: 2px solid #47D0AF;
+    border-radius: 5px;
+}
+.frmBtnBtn input {
+    text-align: center;
+    width: 100%;
+}
+#opcionFormularioDosC {
+    @extend .seccionDos;
+    width: 50%;
+}
+
+/* Dirección Mapa */
+.mapaDireccionC {
+    height: 50%;
+}
+.cajonDireccionC {
+    @extend .sliderPrincipal;
+    margin: 0 auto;
+    height: 50%;
+}
+.cajonImagenDireccionC {
+    width: 25%;
+    margin: auto;
+}
+.textoDireccionC {
+    width: 75%;
+    @include margin(auto, auto, 10px, 10px);
+}
+.textoDireccionC h3 {
+    margin: revert;
+}
+.imagenDireccionC {
+    width: 100%;
+}
+
+/****************************************/
+/*######################################################################*/
+/*#################### IMPORTACIONES DE ESTILOS RESPONSIVE ####################*/
+@import "responsive";

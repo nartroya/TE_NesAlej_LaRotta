@@ -1,0 +1,26 @@
+/******GRID's******/
+/*Grid's Areas Generales*/
+nav {grid-area: menu;}
+header {grid-area: slider;}
+main {grid-area: cuerpo;}
+footer {grid-area: pie;}
+.vaciaUno {grid-area: vaciaUno;}
+.vaciaDos{grid-area: vaciaDos;}
+.vaciaTittleUno {grid-area: vaciaTittleUno;}
+.vaciaTittleDos {grid-area: vaciaTittleDos;}
+.linea {grid-area: linea;}
+.vaciaFooterUno {grid-area: vaciaFooterUno;}
+.vaciaFooterDos {grid-area: vaciaFooterDos;}
+
+#gridAreas {
+    display: grid;
+    grid-template-areas: 
+    "vaciaTittleUno menu menu vaciaTittleDos"
+    "linea linea linea linea"
+    "vaciaUno slider slider vaciaDos"
+    "vaciaUno cuerpo cuerpo vaciaDos"
+    "vaciaFooterUno pie pie vaciaFooterDos"
+    ;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: auto auto auto auto auto;
+}

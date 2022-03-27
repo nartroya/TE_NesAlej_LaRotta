@@ -1,0 +1,80 @@
+//#################### VARIABLES ####################
+$colorPrincipal: #47D0AF;
+$colorEspaciosVacios: white;
+$colorLinksHeader: black;
+$colorLinksHeaderSelec: #47D0AF;
+$colorLinksFooter: white;
+$colorLinksFooterSelec: black;
+
+/*Menu de Navegación*/
+nav {
+    padding: 10px 5px 5px 5px; 
+    display: flex; 
+    flex-direction: row; 
+    text-decoration: none; 
+    height: 100px;
+    .imagenLogo {
+            width: 100px;
+    }
+    .menuNavegacionOpcion {
+                    margin: auto; 
+                    font-size: 1rem;
+                    a.menuOpcionLink {
+                        text-decoration: none; 
+                        color: $colorLinksHeader;
+                        &:hover {
+                            color: $colorLinksHeaderSelec; 
+                            font-size: 110%;
+                        }
+                    }
+                    a.seleccionado {
+                        color: $colorLinksHeaderSelec;
+                    }  
+    }
+    .cajonimagenSocial {
+                width: 50px; 
+                margin-top: auto; 
+                margin-bottom: auto; 
+                margin-left: 0px; 
+                margin-right: 0px;
+                .imagenSocial {
+                        width: 30px;
+                }
+    }
+}
+.linea {
+    height: 5px; 
+    background-color: 
+    $colorPrincipal;
+}
+
+/*Footer*/
+footer {
+    background-color: $colorPrincipal;
+    .footer {
+        display: flex; 
+        flex-direction: row;
+        .divFooter {
+            margin: auto; 
+            padding: 20px 10px 10px 20px;
+            ul {
+                li {
+                    list-style: none; 
+                    margin-bottom: 20px;
+                    & a.opcionlinkFooter {
+                        text-decoration: none; 
+                        color: $colorLinksFooter;
+                        &:hover {
+                            color: $colorLinksFooterSelec
+                        }
+                    }
+                    & a.seleccionadoFooter {
+                        color: $colorLinksFooterSelec
+                    }
+                }
+            }
+        }
+    }
+}
+.vaciaFooterUno {background-image: linear-gradient(to left, $colorPrincipal 20%, $colorEspaciosVacios);}
+.vaciaFooterDos {background-image: linear-gradient(to right, $colorPrincipal 20%, $colorEspaciosVacios);}

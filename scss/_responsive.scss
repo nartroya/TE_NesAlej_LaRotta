@@ -1,0 +1,351 @@
+/******************** Media Queries Generales ********************/
+@media (min-width: 992.1px) and (max-width: 1023px) {
+    h1 {font-size: 1.5em;}
+    h2 {font-size: 1.17em;}
+    h3 {font-size: .83em;}
+    p {font-size: .83em;}
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        "menu menu"
+        "linea linea"
+        "slider slider"
+        "cuerpo cuerpo"
+        "pie pie";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;        
+    } 
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        padding: 0;
+        .divimagenLogo {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .menuNavegacionOpcion {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto; 
+            margin-right: auto; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+        }
+        .cajonimagenSocial {
+            margin-bottom: 0px;
+            display: none;
+        }
+    }
+    #vaciaTittleUno, #vaciaTittleDos, .vaciaUno, .vaciaDos, .vaciaFooterUno, .vaciaFooterDos {display: none;}
+}
+@media (min-width: 480.1px) and (max-width: 992px) {
+    h1 {font-size: 1.5em;}
+    h2 {font-size: 1.17em;}
+    h3 {font-size: .83em;}
+    p {font-size: .83em;}
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        "menu menu"
+        "linea linea"
+        "slider slider"
+        "cuerpo cuerpo"
+        "pie pie"
+        ;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        padding: 0;
+        .divimagenLogo {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .cajonimagenSocial {
+            margin-bottom: 0px;
+            display: none;
+        }
+        .menuNavegacionOpcion {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto; 
+            margin-right: auto; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+        }
+    }
+    #vaciaTittleUno, #vaciaTittleDos, .vaciaUno, .vaciaDos, .vaciaFooterUno, .vaciaFooterDos {display: none;}
+}
+@media (max-width: 480px) {
+    h1 {font-size: 1.5em;}
+    h2 {font-size: 1.17em;}
+    h3 {font-size: 0.83em;}
+    p {font-size: 0.83em;}
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        "menu"
+        "linea"
+        "slider"
+        "cuerpo"
+        "pie"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+        .divimagenLogo {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .menuNavegacionOpcion {/*margin-top: 5px; margin-bottom: 5px;*/
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto; 
+            margin-right: auto; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+        }
+        .cajonimagenSocial {margin-bottom: 0px;display: none;}
+    }
+    #vaciaTittleUno, #vaciaTittleDos, .vaciaUno, .vaciaDos, .vaciaFooterUno, .vaciaFooterDos {display: none;}
+    footer {
+        .footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .divFooter {
+            margin: auto; 
+            padding: 5px;
+            li {list-style: none; margin-bottom: 20px; text-align: center;}
+        }
+    }
+    
+}
+/****************************************/
+/******************** Media Queries Index ********************/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .sliderPrincipal {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .cajonSliderPrincipal h1 {
+        margin-bottom: 20px;
+    }
+    .cajonSliderSecundarioUno {
+        width: 33.33%;
+    }
+    .imagenSliderSecundario {
+        width: 40%;
+    }
+}
+@media (max-width: 480px) {
+    .sliderPrincipal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .cajonSliderPrincipal {
+            width: 100%; 
+        }
+    }
+    .sliderSecundario {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .cajonSliderSecundario {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            h4 {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .imagenSliderSecundario:hover {
+                transform:scale(1);
+            }
+        }
+    }
+    .seccionUno {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .cajonSeccionUno {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+    }
+    .imagenDiagrama {width: 100%; margin: auto;}
+}
+/****************************************/
+/******************** Media Queries NUESTRO EQUIPO ********************/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .seccionEquipoUnoNE, .seccionEquipoDosNE {
+        margin-top: 30px;
+        .cajonEquipoNE {
+            border: solid 1px;
+            width: 30%;
+            &:hover {
+                width: 40%;
+            }
+        } 
+    }
+    .textoMarcasNE {margin: 10px;}
+    .imagenMarcasNE {width: 20%; margin: 10px;}
+}
+@media (max-width: 480px) {
+    .seccionEquipoUnoNE {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .seccionEquipoDosNE {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .cajonEquipoNE {
+        border: solid 1px;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    .seccionMarcasDosNE {
+        flex-direction: column;
+    }
+    .imagenMarcasNE {width: 70%; margin: 0px;}
+    .cajonEquipoNE:hover {
+        width: 90%;
+    }
+}
+/****************************************/
+/******************** Media Queries PRODUCTOS ********************/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .textoSliderPrincipalP {
+        padding: 10px;
+    }
+    .textoSeccionUnoP p {
+        padding: 10px;
+    }
+    .textoSeccionDosP {
+        margin: 10px;
+    }
+    .cajonImagenOnpremiseP {
+        width: 50%;
+        margin: auto;
+    }
+    .textoSeccionTresP {
+        margin: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .cajonSeccionUnoP {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .opcionCajonSeccionUnoP {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .textoSliderPrincipalP {
+        padding: 10px;
+    }
+    .textoSeccionUnoP p {
+        padding: 10px;
+    }
+    .textoSeccionDosP {
+        margin: 10px;
+    }
+    .cajonOnpremisesP {
+        width: 95%;
+    }
+    .cajonImagenOnpremiseP {
+        width: 50%;
+        margin: auto;
+    }
+    .botonSeccionTresP {
+        text-align: center;
+    }
+    .textoSeccionTresP {
+        margin: 10px;
+    }
+}
+/****************************************/
+/******************** Media Queries CONTACTANOS ********************/
+@media (min-width: 481px) and (max-width: 1023px) {
+    .formularioC {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .tituloOpcionC {
+        @include display (flex, row);
+    }
+    .sliderPrincipalDosC {
+        display: flex;
+        flex-direction: column;
+    }
+    .opcionContactoC {
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .cajonFormularioC {
+        display: flex;
+        flex-direction: column;
+    }
+    .tituloFormularioC {
+        margin-left: 10px;
+    }
+    .cajonImagenDireccionC {
+        width: 90%;
+    }
+    .textoDireccionC {
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #opcionFormularioUnoC, #opcionFormularioDosC {
+        margin: auto;
+        width: 90%;
+    }
+    #opcionFormularioDosC {
+        margin-top: 20px;
+    }
+    .frmCampTxt input {
+        width: 100%;
+    }
+    .cajonDireccionC {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .textoDireccionC h3 {
+        margin: revert;
+    }
+}
+/****************************************/
