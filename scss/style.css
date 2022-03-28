@@ -12275,18 +12275,11 @@ fieldset:disabled .btn {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0px auto;
-}
-
-.sliderSecundario .cajonSliderSecundario h3, .sliderSecundario .cajonSliderSecundario .h3 {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 auto;
 }
 
 .sliderSecundario .cajonSliderSecundario .imagenSliderSecundario {
-  width: 150px;
+  width: 100px;
   -webkit-transition: all 1.2s;
   transition: all 1.2s;
 }
@@ -12306,6 +12299,23 @@ fieldset:disabled .btn {
 
 .sliderSecundario #cajonSliderSecundarioTres {
   background-color: #2d9bf069;
+}
+
+.sliderSecundarioTextoI {
+  margin: auto;
+  width: 70%;
+  height: 80%;
+}
+
+.sliderSecundarioTextoI h3, .sliderSecundarioTextoI .h3 {
+  margin-top: auto;
+  margin-bottom: revert;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sliderSecundarioImagenI {
+  margin: auto;
 }
 
 /****************************************/
@@ -13727,24 +13737,29 @@ seccionMarcasNE {
 /****************************************/
 /******************** Media Queries Index ********************/
 @media (min-width: 481px) and (max-width: 1023px) {
-  .sliderPrincipal, .sliderSecundario, .seccionUno, .seccionEquipoUnoNE, .seccionEquipoDosNE, .cajonSeccionUnoP, .sliderPrincipalDosC, .tituloOpcionC, .cajonFormularioC, .cajonDireccionC {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-  }
   .cajonSliderPrincipal h1, .cajonSliderPrincipal .h1 {
     margin-bottom: 20px;
   }
-  .cajonSliderSecundarioUno {
-    width: 33.33%;
+  .sliderSecundario #cajonSliderSecundarioUno, .sliderSecundario #cajonSliderSecundarioDos, .sliderSecundario #cajonSliderSecundarioTres {
+    background-color: white;
   }
   .imagenSliderSecundario {
     width: 40%;
+  }
+  #cajonSliderSecundarioUno h3, #cajonSliderSecundarioUno .h3 {
+    background-color: #642cb352;
+  }
+  #cajonSliderSecundarioDos h3, #cajonSliderSecundarioDos .h3 {
+    background-color: #414ab25d;
+  }
+  #cajonSliderSecundarioTres h3, #cajonSliderSecundarioTres .h3 {
+    background-color: #2d9bf069;
+  }
+  .sliderSecundarioTextoI h3, .sliderSecundarioTextoI .h3 {
+    margin-top: auto;
+    margin-bottom: revert;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -13783,14 +13798,43 @@ seccionMarcasNE {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .sliderSecundario .cajonSliderSecundario h4, .sliderSecundario .cajonSliderSecundario .h4 {
     margin-top: auto;
     margin-bottom: auto;
   }
+  .sliderSecundario .cajonSliderSecundario .imagenSliderSecundario {
+    width: 80px;
+  }
   .sliderSecundario .cajonSliderSecundario .imagenSliderSecundario:hover {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  .sliderSecundario .cajonSliderSecundario #cajonSliderSecundarioUno, .sliderSecundario .cajonSliderSecundario #cajonSliderSecundarioDos, .sliderSecundario .cajonSliderSecundario #cajonSliderSecundarioTres {
+    background-color: white;
+  }
+  .sliderSecundario #cajonSliderSecundarioUnoI {
+    border: 2px solid #642cb352;
+    border-radius: 5px;
+  }
+  .sliderSecundario #cajonSliderSecundarioDosI {
+    border: 2px solid #414ab25d;
+    border-radius: 5px;
+  }
+  .sliderSecundario #cajonSliderSecundarioTresI {
+    border: 2px solid #2d9bf069;
+    border-radius: 5px;
+  }
+  .sliderSecundario #cajonSliderSecundarioUno h3, .sliderSecundario #cajonSliderSecundarioUno .h3 {
+    background-color: white;
+  }
+  .sliderSecundario #cajonSliderSecundarioDos h3, .sliderSecundario #cajonSliderSecundarioDos .h3 {
+    background-color: white;
+  }
+  .sliderSecundario #cajonSliderSecundarioTres h3, .sliderSecundario #cajonSliderSecundarioTres .h3 {
+    background-color: white;
   }
   .seccionUno {
     display: -webkit-box;
@@ -13801,6 +13845,8 @@ seccionMarcasNE {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .seccionUno .cajonSeccionUno {
     display: -webkit-box;
@@ -13811,8 +13857,8 @@ seccionMarcasNE {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
   }
   .imagenDiagrama {

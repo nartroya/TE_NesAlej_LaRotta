@@ -81,12 +81,9 @@ $colorSombraUno: #47D0AF;
     .cajonSliderSecundario {
         display: flex;
         flex-direction: row;
-        margin: 0px auto;
-        h3 {
-            @include margin(auto, auto, 20px, 20px);
-        }
+        margin: 0 auto;
         .imagenSliderSecundario {
-            width: 150px; 
+            width: 100px; 
             transition: all 1.2s;
             &:hover {
                 transform:scale(1.1);
@@ -102,6 +99,20 @@ $colorSombraUno: #47D0AF;
     #cajonSliderSecundarioTres {
         background-color: #2d9bf069;
     }
+}
+.sliderSecundarioTextoI {
+    margin: auto;
+    width: 70%;
+    height: 80%;
+}
+.sliderSecundarioTextoI h3 {
+    margin-top: auto;
+    margin-bottom: revert;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.sliderSecundarioImagenI {
+    margin: auto;
 }
 /****************************************/
 /******************** Cuerpo Index Main ********************/

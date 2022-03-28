@@ -139,19 +139,31 @@
 /****************************************/
 /******************** Media Queries Index ********************/
 @media (min-width: 481px) and (max-width: 1023px) {
-    .sliderPrincipal {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
     .cajonSliderPrincipal h1 {
         margin-bottom: 20px;
     }
-    .cajonSliderSecundarioUno {
-        width: 33.33%;
+    .sliderSecundario {
+        #cajonSliderSecundarioUno, #cajonSliderSecundarioDos, #cajonSliderSecundarioTres {
+                background-color: white;
+        }
     }
     .imagenSliderSecundario {
         width: 40%;
+    }
+    #cajonSliderSecundarioUno h3 {
+        background-color: #642cb352;
+    }
+    #cajonSliderSecundarioDos h3 {
+        background-color: #414ab25d;
+    }
+    #cajonSliderSecundarioTres h3 {
+        background-color: #2d9bf069;
+    }
+    .sliderSecundarioTextoI h3 {
+        margin-top: auto;
+        margin-bottom: revert;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 @media (max-width: 480px) {
@@ -173,25 +185,57 @@
             width: 100%;
             margin-top: 5px;
             margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
             h4 {
                 margin-top: auto;
                 margin-bottom: auto;
             }
+            .imagenSliderSecundario {
+                width: 80px;
+            }
             .imagenSliderSecundario:hover {
                 transform:scale(1);
             }
+            #cajonSliderSecundarioUno, #cajonSliderSecundarioDos, #cajonSliderSecundarioTres {
+                background-color: white;
+            }
+        }
+        
+        #cajonSliderSecundarioUnoI {
+            border: 2px solid #642cb352;
+            border-radius: 5px;
+        } 
+        #cajonSliderSecundarioDosI {
+            border: 2px solid #414ab25d;
+            border-radius: 5px;
+        } 
+        #cajonSliderSecundarioTresI {
+            border: 2px solid #2d9bf069;
+            border-radius: 5px;
+        }
+        #cajonSliderSecundarioUno h3 {
+            background-color: white;
+        }
+        #cajonSliderSecundarioDos h3 {
+            background-color: white;
+        }
+        #cajonSliderSecundarioTres h3 {
+            background-color: white;
         }
     }
     .seccionUno {
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
         .cajonSeccionUno {
             display: flex;
             flex-direction: column;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             width: 100%;
         }
     }
